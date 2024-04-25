@@ -16,6 +16,7 @@ The following version changes are in place with the upgrade to HPCM 1.10:
 Jobs that were queued before the upgrade have been restored to the appropriate queues but are placed on user hold. 
 Jobs are not expected to complete successfully due to the changes made to the system and software environments resulting from the upgrade. 
 We recommend you review your jobs and either release the hold (`qrls <jobid>`) or delete it (`qdel <jobid>`) and resubmit as appropriate.
+
 - Users need to rebuild for the new PE environment and major OS upgrade. Existing binaries are unlikely to run successfully.
 - We have held all jobs submitted prior to the upgrade as a user hold. Users may release their existing jobs with `qrls` to run after they have rebuilt their binaries.
 - PBS does cache the job execution script.  If a change to the script is required due to a path changing post rebuild, the job will have to be resubmitted.
